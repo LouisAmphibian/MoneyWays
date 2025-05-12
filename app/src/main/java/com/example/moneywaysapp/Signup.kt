@@ -20,6 +20,7 @@ class Signup : AppCompatActivity() {
 
         registerBtn.setOnClickListener {
             val registerBtn: Button = findViewById(R.id.registerBtn)
+            val loginbtn: Button = findViewById(R.id.loginbtn)
             val nameText = fullName.text.toString()
             val emailText = email.text.toString()
             val passwordText = password.text.toString()
@@ -31,8 +32,10 @@ class Signup : AppCompatActivity() {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }
 
-
-
+            loginbtn.setOnClickListener {
+                val intent = Intent(this, login::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
