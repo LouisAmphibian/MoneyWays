@@ -1,4 +1,4 @@
-]<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
@@ -18,7 +18,7 @@
             android:id="@+id/greetingText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello, John"
+            android:text="@string/greeting_text"
             android:textSize="32sp"
             android:textStyle="bold"
             android:textColor="#000000"
@@ -38,7 +38,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Balance"
+                android:text="@string/total_balance"
                 android:textColor="#7A7A7A"
                 android:textSize="14sp" />
 
@@ -46,7 +46,7 @@
                 android:id="@+id/totalBalance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="R 5,000.00"
+                android:text="@string/sample_total_amount"
                 android:textColor="#000000"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -69,13 +69,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Budget"
+                        android:text="@string/budget_label"
                         android:textColor="#7A7A7A"
                         android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/budgetText"
-                        android:text="R 10,000.00"
+                        android:text="@string/sample_budget"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="#000000"
@@ -92,7 +92,7 @@
                     android:gravity="center">
 
                     <TextView
-                        android:text="Expenses"
+                        android:text="@string/expenses_label"
                         android:textSize="14sp"
                         android:textColor="#7A7A7A"
                         android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
 
                     <TextView
                         android:id="@+id/expensesText"
-                        android:text="R 3,500.00"
+                        android:text="@string/sample_expenses"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="#000000"
@@ -117,7 +117,7 @@
                     android:gravity="end">
 
                     <TextView
-                        android:text="Savings"
+                        android:text="@string/savings_label"
                         android:textSize="14sp"
                         android:textColor="#7A7A7A"
                         android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
 
                     <TextView
                         android:id="@+id/savingsText"
-                        android:text="R 2,500.00"
+                        android:text="@string/sample_savings"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="#000000"
@@ -140,17 +140,17 @@
             android:id="@+id/addExpenseButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add Expense"
+            android:text="@string/add_expense"
             android:backgroundTint="#2764FF"
             android:textColor="#FFFFFF"
-            android:drawableLeft="@android:drawable/ic_input_add"
+            android:drawableStart="@android:drawable/ic_input_add"
             android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/viewReportsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Reports"
+            android:text="@string/view_reports"
             android:backgroundTint="#2764FF"
             android:textColor="#FFFFFF"
             android:drawableLeft="@android:drawable/ic_menu_agenda" />
