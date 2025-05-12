@@ -19,12 +19,18 @@ class login : AppCompatActivity() {
         loginBtn.setOnClickListener {
             val emailText = email.text.toString()
             val passwordText = password.text.toString()
+            val signupbtn: Button = findViewById(R.id.signupbtn)
 
             if (emailText.isNotEmpty() && passwordText.isNotEmpty()) {
                 // TODO: Validate login
                 Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            }
+
+           signupbtn.setOnClickListener {
+                val intent = Intent(this, Signup::class.java)
+                startActivity(intent)
             }
 
             }

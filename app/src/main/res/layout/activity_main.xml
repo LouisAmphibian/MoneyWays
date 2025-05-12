@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="373dp" />
+        tools:layout_editor_absoluteY="279dp" />
 
     <TextView
         android:id="@+id/appDescription"
