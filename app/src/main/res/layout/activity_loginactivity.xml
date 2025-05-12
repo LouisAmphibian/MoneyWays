@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:padding="24dp">
 
-    <!-- Login Header -->
     <TextView
         android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
@@ -15,14 +14,12 @@
         android:layout_marginTop="40dp"
         android:fontFamily="@font/alfa_slab_one"
         android:text="Login"
-        android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Email Input -->
     <EditText
         android:id="@+id/emailInput"
         android:layout_width="0dp"
@@ -34,7 +31,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"/>
 
-    <!-- Password Input -->
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="0dp"
@@ -46,7 +42,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
 
-    <!-- Login Button -->
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="0dp"
@@ -54,37 +49,29 @@
         android:layout_marginTop="24dp"
         android:backgroundTint="#33691E"
         android:text="Login"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordInput" />
 
-    <!-- Sign Up Link -->
     <TextView
-        android:id="@+id/signupLink"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="Don't have an account? Sign Up"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:text="Don't have an account?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
     <Button
         android:id="@+id/signupbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="260dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#33691E"
         android:text="Sign Up"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupLink" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

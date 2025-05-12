@@ -2,11 +2,9 @@ package com.example.moneyways
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.moneywaysapp.Signup
+import com.example.moneywaysapp.SignupActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val btnGetStarted: Button = findViewById(R.id.btnGetStarted)
 
         btnGetStarted.setOnClickListener {
-            val intent = Intent(this, Signup::class.java)
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
     }

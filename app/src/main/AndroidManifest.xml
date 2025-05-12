@@ -16,7 +16,7 @@
             android:name="com.example.moneywaysapp.login"
             android:exported="false" />
         <activity
-            android:name="com.example.moneywaysapp.Signup"
+            android:name="com.example.moneywaysapp.SignupActivity"
             android:exported="false" />
         <activity
             android:name=".signupActivity"

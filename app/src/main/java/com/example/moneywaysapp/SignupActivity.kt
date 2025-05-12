@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.moneyways.R
 
-class Signup : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup2)
@@ -17,25 +17,27 @@ class Signup : AppCompatActivity() {
         val email = findViewById<EditText>(R.id.emailInput)
         val password = findViewById<EditText>(R.id.passwordInput)
         val registerBtn = findViewById<Button>(R.id.registerBtn)
+        val presloginbtn = findViewById<Button>(R.id.presloginbtn) // Matches XML id
 
         registerBtn.setOnClickListener {
-            val registerBtn: Button = findViewById(R.id.registerBtn)
-            val loginbtn: Button = findViewById(R.id.loginbtn)
             val nameText = fullName.text.toString()
             val emailText = email.text.toString()
             val passwordText = password.text.toString()
 
             if (nameText.isNotEmpty() && emailText.isNotEmpty() && passwordText.isNotEmpty()) {
-                // TODO: Handle registration
                 Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show()
+                //Auto-login after registration
+                val intent = Intent(this, DashboardActivity::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }
+        }
 
-            loginbtn.setOnClickListener {
-                val intent = Intent(this, login::class.java)
-                startActivity(intent)
-            }
+        presloginbtn.setOnClickListener {
+            // Simple redirect without any checks
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
 }
