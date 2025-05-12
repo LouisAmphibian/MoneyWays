@@ -153,6 +153,6 @@
             android:text="@string/view_reports"
             android:backgroundTint="#2764FF"
             android:textColor="#FFFFFF"
-            android:drawableLeft="@android:drawable/ic_menu_agenda" />
+            android:drawableStart="@android:drawable/ic_menu_agenda" />
     </LinearLayout>
 </ScrollView>
