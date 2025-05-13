@@ -8,41 +8,46 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.moneyways.R
 
-class LoginActivity : AppCompatActivity() {
+// RegisterActivity.kt
+class RegisterActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityRegisterBinding
+    private lateinit var viewModel: AppViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_loginactivity)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val email = findViewById<EditText>(R.id.emailInput)
-        val password = findViewById<EditText>(R.id.passwordInput)
-        val loginBtn = findViewById<Button>(R.id.loginBtn) // Matches XML id
-        val signupbtn = findViewById<Button>(R.id.signupbtn)
+        viewModel = ViewModelProvider(this)[AppViewModel::class.java]
 
-        loginBtn.setOnClickListener {
-            val emailText = email.text.toString()
-            val passwordText = password.text.toString()
+        binding.registerButton.setOnClickListener {
+            val username = binding.usernameEditText.text.toString()
+            val password = binding.passwordEditText.text.toString()
+            val confirmPassword = binding.confirmPasswordEditText.text.toString()
 
-            if (emailText.isNotEmpty() && passwordText.isNotEmpty()) {
-                if (isValidCredentials(emailText, passwordText)) {
-                    val intent = Intent(this, DashboardActivity::class.java)
-                    startActivity(intent)
+            if (username.isBlank() || password.isBlank()) {
+                Toast.makeText(this, "Please enter both username and password", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (password != confirmPassword) {
+                Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            lifecycleScope.launch {
+                try {
+                    viewModel.register(username, password)
+                    Toast.makeText(this@RegisterActivity, "Registration successful! Please login.", Toast.LENGTH_SHORT).show()
                     finish()
-                } else {
-                    Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show()
+                } catch (e: Exception) {
+                    Toast.makeText(this@RegisterActivity, e.message, Toast.LENGTH_SHORT).show()
                 }
-            } else {
-                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }
         }
 
-        signupbtn.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
-            startActivity(intent)
+        binding.loginButton.setOnClickListener {
+            finish()
         }
-    }
-
-    private fun isValidCredentials(email: String, password: String): Boolean {
-        // Add your real authentication logic here
-        return email.isNotBlank() && password.length >= 6
     }
 }

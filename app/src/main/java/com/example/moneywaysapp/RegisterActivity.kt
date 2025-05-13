@@ -11,7 +11,7 @@ import com.example.moneyways.R
 class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup2)
+        setContentView(R.layout.activity_register)
 
         val fullName = findViewById<EditText>(R.id.fullNameInput)
         val email = findViewById<EditText>(R.id.emailInput)

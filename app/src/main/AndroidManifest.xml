@@ -12,31 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moneywaysapp"
         tools:targetApi="31">
-        <activity
-            android:name="com.example.moneywaysapp.login"
-            android:exported="false" />
-        <activity
-            android:name="com.example.moneywaysapp.SignupActivity"
-            android:exported="false" />
-        <activity
-            android:name=".signupActivity"
-            android:exported="false" />
-        <activity
-            android:name=".loginactivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>
