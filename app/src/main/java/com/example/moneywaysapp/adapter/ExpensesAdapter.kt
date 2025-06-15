@@ -1,4 +1,5 @@
 package com.example.moneywaysapp.adapter
+/*
 
 // ExpensesAdapter.kt
 class ExpensesAdapter(
@@ -45,3 +46,5 @@ class ExpensesAdapter(
         notifyDataSetChanged()
     }
 }
+
+ */

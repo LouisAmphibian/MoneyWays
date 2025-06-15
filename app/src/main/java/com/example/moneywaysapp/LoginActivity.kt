@@ -1,14 +1,25 @@
 package com.example.moneywaysapp
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.moneyways.R
 
+class LoginActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        //load login page
+        setContentView(R.layout.activity_login)
+
+    }
+}
+
+/* Old code
 // RegisterActivity.kt
+
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var viewModel: AppViewModel
@@ -51,3 +62,5 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 }
+
+ */

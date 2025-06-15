@@ -1,5 +1,6 @@
 package com.example.moneywaysapp.data
 
+/*
 // AppDao.kt
 @Dao
 interface AppDao {
@@ -49,3 +50,5 @@ interface AppDao {
     @Update
     suspend fun updateBudgetGoal(goal: BudgetGoal)
 }
+
+ */

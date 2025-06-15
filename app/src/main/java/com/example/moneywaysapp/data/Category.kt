@@ -1,5 +1,5 @@
 package com.example.moneywaysapp.data
-
+/*
 // Category.kt
 @Entity(tableName = "categories")
 data class Category(
@@ -28,3 +28,5 @@ data class BudgetGoal(
     val minMonthlyGoal: Double,
     val maxMonthlyGoal: Double
 )
+
+ */

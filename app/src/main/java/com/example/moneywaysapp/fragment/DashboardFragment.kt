@@ -1,5 +1,5 @@
 package com.example.moneywaysapp.fragment
-
+/*
 // DashboardFragment.kt
 class DashboardFragment : Fragment() {
     private lateinit var binding: FragmentDashboardBinding
@@ -199,3 +199,5 @@ class CategoryBreakdownAdapter(
 
     override fun getItemCount() = categories.size
 }
+
+ */

@@ -12,4 +12,5 @@
     <string name="add_expense">Add Expense</string>
     <string name="view_reports">View Reports</string>
     <string name="transactions">Transaction</string>
+    <string name="money_ways">Money Ways</string>
 </resources>

@@ -1,5 +1,5 @@
 package com.example.moneywaysapp.fragment
-
+/*
 class CategoriesFragment : Fragment() {
     private lateinit var binding: FragmentCategoriesBinding
     private lateinit var viewModel: BudgetViewModel
@@ -97,3 +97,5 @@ class CategoriesFragment : Fragment() {
             .show()
     }
 }
+
+ */

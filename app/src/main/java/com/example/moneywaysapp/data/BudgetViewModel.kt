@@ -1,7 +1,7 @@
 package com.example.moneywaysapp.data
 
 import androidx.lifecycle.AndroidViewModel
-
+/*
 
 class BudgetViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: BudgetRepository
@@ -79,3 +79,5 @@ class BudgetViewModel(application: Application) : AndroidViewModel(application) 
         return id
     }
 }
+
+ */

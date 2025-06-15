@@ -1,4 +1,8 @@
 package com.example.moneywaysapp.fragment
+/*
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 
 // GoalsFragment.kt
 class GoalsFragment : Fragment() {
@@ -86,3 +90,5 @@ class GoalsFragment : Fragment() {
         }
     }
 }
+
+ */

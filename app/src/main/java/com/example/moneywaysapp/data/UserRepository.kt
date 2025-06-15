@@ -1,5 +1,5 @@
 package com.example.moneywaysapp.data
-
+/*
 // AppRepository.kt
 class AppRepository(private val appDao: AppDao) {
     // User operations
@@ -63,3 +63,5 @@ class AppRepository(private val appDao: AppDao) {
         return appDao.getUserBudgetGoal(userId)
     }
 }
+
+ */

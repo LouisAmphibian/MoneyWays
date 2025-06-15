@@ -1,5 +1,5 @@
 package com.example.moneywaysapp.data
-
+/*
 import androidx.lifecycle.AndroidViewModel
 
 // AppViewModel.kt
@@ -96,3 +96,5 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         return repository.getUserBudgetGoal(userId).asLiveData()
     }
 }
+
+ */

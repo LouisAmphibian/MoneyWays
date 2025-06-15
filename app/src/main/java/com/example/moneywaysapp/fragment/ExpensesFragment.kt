@@ -1,5 +1,5 @@
 package com.example.moneywaysapp.fragment
-
+/*
 // CategoriesFragment.kt
 class ExpensesFragment : Fragment() {
     private lateinit var binding: FragmentExpensesBinding
@@ -147,3 +147,5 @@ class ExpensesFragment : Fragment() {
         // Implement expense details dialog
     }
 }
+
+ */

@@ -1,5 +1,5 @@
 package com.example.moneywaysapp.data
-
+/*
 @Dao
 interface BudgetDao {
     // Category operations
@@ -38,3 +38,5 @@ interface BudgetDao {
     @Update
     suspend fun updateBudgetGoal(goal: BudgetGoal)
 }
+
+ */

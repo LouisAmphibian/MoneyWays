@@ -1,5 +1,6 @@
 package com.example.moneywaysapp.data
 
+/*
 // AppDatabase.kt
 @Database(
     entities = [User::class, Category::class, Expense::class, BudgetGoal::class],
@@ -26,3 +27,5 @@ abstract class AppDatabase : RoomDatabase() {
         }
     }
 }
+
+ */
