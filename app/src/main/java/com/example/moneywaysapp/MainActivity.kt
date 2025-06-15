@@ -1,6 +1,8 @@
 package com.example.moneywaysapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,6 +15,11 @@ class MainActivity : AppCompatActivity() {
 
         //calling the main xml
         setContentView(R.layout.activity_main)
+
+        //The get started button
+        findViewById<Button>(R.id.btnGetStarted).setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
 
     }
 }
