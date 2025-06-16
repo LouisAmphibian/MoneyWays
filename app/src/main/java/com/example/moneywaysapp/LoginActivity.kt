@@ -1,6 +1,8 @@
 package com.example.moneywaysapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,6 +16,10 @@ class LoginActivity : AppCompatActivity() {
         //load login page
         setContentView(R.layout.activity_login)
 
+        //for a user who doesn't have an account
+        findViewById<Button>(R.id.signupBtn).setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
     }
 }
 
