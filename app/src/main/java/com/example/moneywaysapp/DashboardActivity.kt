@@ -8,6 +8,8 @@ import com.example.moneyways.R
 class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard) // matches your XML filename
+
+        //load the dashboard
+        setContentView(R.layout.activity_dashboard)
     }
 }

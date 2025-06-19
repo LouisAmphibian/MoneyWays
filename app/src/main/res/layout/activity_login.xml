@@ -33,17 +33,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/loginTitle" />
 
+    <!-- DEBUG PASSWORD INPUT -->
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
-        android:background="@drawable/bottom_border"
-        app:layout_constraintTop_toBottomOf="@id/emailInput"
+        android:background="@android:color/holo_blue_light"
+        android:textColorHint="#000000"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="32dp" />
+
+    <!-- BIG RED LINE THAT SHOULD SHOW -->
+    <View
+        android:id="@+id/passwordUnderline"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="#FF0000"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+
+
 
     <Button
         android:id="@+id/loginBtn"
@@ -60,7 +77,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginTop="24dp"
         android:text="Don't have an account?"
         app:layout_constraintEnd_toEndOf="parent"
