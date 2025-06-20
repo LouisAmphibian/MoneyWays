@@ -85,7 +85,7 @@
             android:id="@+id/tvPasswordText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="14dp"
             android:padding="12dp"
             android:text="Password"
             android:textColor="#000000"
@@ -109,7 +109,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="17dp"
             android:text="Don't remeber Password? Recovery It"
             android:textAlignment="center" />
 
@@ -225,7 +225,7 @@
             android:id="@+id/button"
             style="@android:style/Widget.ActionButton"
             android:layout_width="250dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:background="@drawable/button_background"
