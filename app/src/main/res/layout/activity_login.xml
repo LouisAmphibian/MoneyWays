@@ -48,21 +48,22 @@
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
-        android:layout_width="410dp"
-        android:layout_height="517dp"
-        android:layout_marginTop="79dp"
+        android:layout_width="408dp"
+        android:layout_height="568dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:padding="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginTitle"
-        tools:layout_editor_absoluteX="0dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
 
 
         <TextView
             android:id="@+id/tvEmailText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:padding="12dp"
             android:text="Email"
             android:textColor="#000000"
@@ -85,7 +86,7 @@
             android:id="@+id/tvPasswordText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="20dp"
             android:padding="12dp"
             android:text="Password"
             android:textColor="#000000"
@@ -157,7 +158,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="25dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -238,7 +239,7 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="22dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:text="Don't have an account? Click Here"
             android:textAlignment="center" />
 
