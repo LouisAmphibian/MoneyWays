@@ -3,6 +3,7 @@ package com.example.moneywaysapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,7 +16,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         //when  user has login
-        findViewById<Button>(R.id.loginBtn).setOnClickListener {
+        findViewById<TextView>(R.id.textView9).setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
     }

@@ -21,8 +21,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="412dp"
-        android:layout_height="210dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
         android:adjustViewBounds="true"
         android:contentDescription="Top bubbles"
         android:scaleType="centerCrop"
