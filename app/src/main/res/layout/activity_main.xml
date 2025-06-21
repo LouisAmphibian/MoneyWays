@@ -4,31 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/textColorHintInverse"
-    android:padding="24dp">
+    android:background="#D7D6D7"
+    android:padding="0dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="418dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/budgeting"
+        tools:layout_editor_absoluteY="-1dp" />
 
     <TextView
         android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
         android:fontFamily="@font/alfa_slab_one"
         android:foregroundTintMode="screen"
         android:text="@string/money_ways"
         android:textSize="28sp"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="551dp" />
 
     <TextView
         android:id="@+id/appDescription"
         style="@android:style/Widget.TextView.PopupMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:minHeight="48dp"
@@ -36,36 +43,26 @@
         android:textColor="#40A11B"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appTitle" />
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="590dp" />
 
     <Button
         android:id="@+id/btnGetStarted"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:backgroundTint="#33691E"
         android:text="Get started"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appDescription"
-        app:layout_constraintVertical_bias="0.395" />
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="630dp" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="154dp"
         android:layout_height="176dp"
-        android:layout_marginTop="100dp"
         android:src="@drawable/logo_and_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="481dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
