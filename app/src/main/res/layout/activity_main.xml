@@ -27,7 +27,7 @@
         android:layout_marginTop="44dp"
         android:text="Welcome\nto MoneyWays"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
