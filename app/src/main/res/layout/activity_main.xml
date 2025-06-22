@@ -4,65 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D7D6D7"
+    android:background="#2C3E50"
     android:padding="0dp">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="418dp"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
         android:scaleType="fitXY"
+        android:src="@drawable/budgeting"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/budgeting"
-        tools:layout_editor_absoluteY="-1dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/BottomRoundedCorners" />
 
     <TextView
         android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alfa_slab_one"
-        android:foregroundTintMode="screen"
-        android:text="@string/money_ways"
-        android:textSize="28sp"
-        android:textStyle="bold|italic"
+        android:layout_marginTop="328dp"
+        android:text="Welcome\nto MoneyWays"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginStart="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="551dp" />
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/appDescription"
         style="@android:style/Widget.TextView.PopupMenu"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:minHeight="48dp"
         android:text="Track, save, and grow your money effortlessly."
         android:textColor="#40A11B"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="590dp" />
+        app:layout_constraintTop_toBottomOf="@+id/appTitle"
+        tools:layout_editor_absoluteX="16dp" />
 
     <Button
         android:id="@+id/btnGetStarted"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#33691E"
+        android:layout_width="175dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/background_button_intro"
+        android:gravity="center"
         android:text="Get started"
         android:textColor="@android:color/white"
+        android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="630dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appDescription"
+        app:layout_constraintVertical_bias="0.988" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="154dp"
-        android:layout_height="176dp"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="308dp"
         android:src="@drawable/logo_and_name"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="481dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
