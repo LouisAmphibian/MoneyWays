@@ -10,7 +10,7 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="460dp"
         android:scaleType="fitXY"
         android:src="@drawable/budgeting"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,22 +23,23 @@
         android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="328dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
         android:text="Welcome\nto MoneyWays"
         android:textColor="@color/white"
         android:textSize="35sp"
         android:textStyle="bold"
-        android:layout_marginStart="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/appDescription"
         style="@android:style/Widget.TextView.PopupMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:minHeight="48dp"
@@ -46,8 +47,8 @@
         android:textColor="#40A11B"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/appTitle"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnGetStarted"
@@ -73,6 +74,10 @@
         android:layout_marginBottom="308dp"
         android:src="@drawable/logo_and_name"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
