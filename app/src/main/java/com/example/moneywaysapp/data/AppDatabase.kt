@@ -12,7 +12,7 @@ import androidx.room.Room
     exportSchema = false
 )
 
-//Make connectiom to databaase
+//Make connection to database
 abstract class AppDatabase : RoomDatabase() {
     abstract fun appDao(): AppDao
 

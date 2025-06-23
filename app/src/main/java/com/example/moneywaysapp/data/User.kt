@@ -1,5 +1,8 @@
 package com.example.moneywaysapp.data
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 
 // User.kt
 @Entity(tableName = "users")
