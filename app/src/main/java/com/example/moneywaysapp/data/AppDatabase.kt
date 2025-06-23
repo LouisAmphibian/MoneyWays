@@ -1,19 +1,27 @@
 package com.example.moneywaysapp.data
 
-/*
-// AppDatabase.kt
+import android.content.Context
+import androidx.room.Database
+import androidx.room.RoomDatabase
+
+
+// AppDatabase.kt to control operation
 @Database(
-    entities = [User::class, Category::class, Expense::class, BudgetGoal::class],
+    entities = [User::class],
     version = 1,
     exportSchema = false
 )
+
+//Make connectiom to databaase
 abstract class AppDatabase : RoomDatabase() {
     abstract fun appDao(): AppDao
 
+    //make sure app uses only on db instance
     companion object {
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
+        //Get room database
         fun getDatabase(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
@@ -27,5 +35,3 @@ abstract class AppDatabase : RoomDatabase() {
         }
     }
 }
-
- */

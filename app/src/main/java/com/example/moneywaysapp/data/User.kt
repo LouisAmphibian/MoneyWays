@@ -1,14 +1,14 @@
 package com.example.moneywaysapp.data
 
-/*
+
 // User.kt
 @Entity(tableName = "users")
 data class User(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val username: String,
     val password: String
 )
-
+/*
 // Category.kt
 @Entity(tableName = "categories")
 data class Category(

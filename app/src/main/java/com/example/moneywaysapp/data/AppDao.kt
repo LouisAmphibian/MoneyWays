@@ -1,6 +1,10 @@
 package com.example.moneywaysapp.data
 
-/*
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.Query
+
 // AppDao.kt
 @Dao
 interface AppDao {
@@ -14,6 +18,7 @@ interface AppDao {
     @Query("SELECT * FROM users WHERE username = :username LIMIT 1")
     suspend fun checkUsernameExists(username: String): User?
 
+    /*
     // Category operations
     @Insert
     suspend fun insertCategory(category: Category): Long
@@ -49,6 +54,7 @@ interface AppDao {
 
     @Update
     suspend fun updateBudgetGoal(goal: BudgetGoal)
+    */
+
 }
 
- */
