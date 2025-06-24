@@ -22,7 +22,13 @@ class RegisterActivity : AppCompatActivity() {
         val emailInput = findViewById<EditText>(R.id.emailInput)
         val passwordInput = findViewById<EditText>(R.id.passwordInput)
         val rePasswordInput = findViewById<EditText>(R.id.passwordInput2)
-        val registerBtn = findViewById<TextView>(R.id.textView9)
+        val registerBtn = findViewById<Button>(R.id.signUpBtn)
+        val alreadyHaveAcc = findViewById<TextView>(R.id.textView9)
+
+        //already have account
+        alreadyHaveAcc.setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
 
         //when  user has login
         registerBtn.setOnClickListener {
@@ -50,7 +56,7 @@ class RegisterActivity : AppCompatActivity() {
             //Create user object
             val newUser = User(username = username, password = matchPassword)
 
-            startActivity(Intent(this, LoginActivity::class.java))
+
         }
     }
 }
