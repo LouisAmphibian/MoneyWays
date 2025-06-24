@@ -223,7 +223,7 @@
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/loginBtn"
             style="@android:style/Widget.ActionButton"
             android:layout_width="250dp"
             android:layout_height="48dp"

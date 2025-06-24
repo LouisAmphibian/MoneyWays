@@ -15,12 +15,14 @@
         <activity
             android:name="com.example.moneywaysapp.RegisterActivity"
             android:exported="false" />
-        <activity
-            android:name="com.example.moneywaysapp.Register"
-            android:exported="false" />
+
         <activity
             android:name="com.example.moneywaysapp.LoginActivity"
             android:exported="false" />
+
+        <activity android:name="com.example.moneywaysapp.DashboardActivity"
+            android:exported="false"/>
+
         <activity
             android:name="com.example.moneywaysapp.MainActivity"
             android:exported="true">

@@ -11,7 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.moneyways.R
+import com.example.moneywaysapp.data.AppDatabase
 import com.example.moneywaysapp.data.User
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,6 +61,18 @@ class RegisterActivity : AppCompatActivity() {
             //Create user object
             val newUser = User(username = username, password = matchPassword)
 
+            //block to register user in RoomDb in background then will show toast and success
+            CoroutineScope(Dispatchers.IO).launch {
+
+                // Insert the new user into the Room database using the DAO
+                AppDatabase.getDatabase(this@RegisterActivity).appDao().insertUser(newUser)
+
+                // Switch context to the Main (UI) thread after database operation
+                withContext(Dispatchers.Main){
+                    Toast.makeText(this@RegisterActivity, "Registered", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this@RegisterActivity,LoginActivity::class.java)) // Navigate to the LoginActivity after successful registration
+                }
+            }
 
         }
     }
