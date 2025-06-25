@@ -19,16 +19,25 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class RegisterActivity : AppCompatActivity() {
+
+    //Limits access to only inside the class AND lets me delay initialization of a non-null variable
+    private lateinit var nameInput: EditText
+    private lateinit var emailInput: EditText
+    private lateinit var passwordInput: EditText
+    private lateinit var rePasswordInput: EditText
+    private lateinit var registerBtn: Button
+    private lateinit var alreadyHaveAcc: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val nameInput = findViewById<EditText>(R.id.nameInput)
-        val emailInput = findViewById<EditText>(R.id.emailInput)
-        val passwordInput = findViewById<EditText>(R.id.passwordInput)
-        val rePasswordInput = findViewById<EditText>(R.id.passwordInput2)
-        val registerBtn = findViewById<Button>(R.id.signUpBtn)
-        val alreadyHaveAcc = findViewById<TextView>(R.id.textView9)
+        nameInput = findViewById<EditText>(R.id.nameInput)
+        emailInput = findViewById<EditText>(R.id.emailInput)
+        passwordInput = findViewById<EditText>(R.id.passwordInput)
+        rePasswordInput = findViewById<EditText>(R.id.passwordInput2)
+        registerBtn = findViewById<Button>(R.id.signUpBtn)
+        alreadyHaveAcc = findViewById<TextView>(R.id.textView9)
 
         //already have account
         alreadyHaveAcc.setOnClickListener{

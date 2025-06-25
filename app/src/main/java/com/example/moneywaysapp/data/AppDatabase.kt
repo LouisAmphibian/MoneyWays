@@ -7,8 +7,8 @@ import androidx.room.Room
 
 // AppDatabase.kt to control operation
 @Database(
-    entities = [User::class],
-    version = 1,
+    entities = [User::class, Category::class],
+    version = 2,
     exportSchema = false
 )
 
@@ -28,7 +28,8 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "budget_tracker_db"
-                ).build()
+                )//.fallbackToDestructiveMigration() // Added for version upgrade
+                .build()
                 INSTANCE = instance
                 instance
             }

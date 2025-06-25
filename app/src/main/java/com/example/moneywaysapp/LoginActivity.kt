@@ -16,6 +16,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class LoginActivity:AppCompatActivity() {
+
+    //Limits access to only inside the class AND lets me delay initialization of a non-null variable
+    private lateinit var emailInput: EditText
+    private lateinit var passwordInput: EditText
+    private lateinit var loginBtn: Button
+    private lateinit var doNotHaveAcc: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -23,10 +30,10 @@ class LoginActivity:AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         //asigin xml field/buttons
-        val emailInput = findViewById<EditText>(R.id.emailInput)
-        val passwordInput = findViewById<EditText>(R.id.passwordInput)
-        val loginBtn =  findViewById<Button>(R.id.loginBtn)
-        val doNotHaveAcc =  findViewById<TextView>(R.id.textView9)
+        emailInput = findViewById(R.id.emailInput)
+        passwordInput = findViewById(R.id.passwordInput)
+        loginBtn =  findViewById(R.id.loginBtn)
+        doNotHaveAcc =  findViewById(R.id.textView9)
 
         //for a user who doesn't have an account
         doNotHaveAcc.setOnClickListener {

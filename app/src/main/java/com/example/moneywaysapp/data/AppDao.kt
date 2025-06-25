@@ -21,7 +21,6 @@ interface AppDao {
     @Query("SELECT * FROM users WHERE username = :username LIMIT 1")
     suspend fun checkUsernameExists(username: String): User?
 
-    /*
     // Category operations
     @Insert
     suspend fun insertCategory(category: Category): Long
@@ -32,6 +31,7 @@ interface AppDao {
     @Delete
     suspend fun deleteCategory(category: Category)
 
+    /*
     // Expense operations
     @Insert
     suspend fun insertExpense(expense: Expense): Long
