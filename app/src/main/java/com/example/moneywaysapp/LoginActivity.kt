@@ -55,7 +55,11 @@ class LoginActivity:AppCompatActivity() {
                     //if user exists
                     if(existingUser != null){
                         Toast.makeText(this@LoginActivity, "Welcome ${existingUser.username}", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this@LoginActivity, DashboardActivity :: class.java)) // Navigate to the Dashboard after successful registration
+
+                        // Navigate to the Dashboard after successful registration
+                        val intent = Intent(this@LoginActivity, DashboardActivity :: class.java)
+                        intent.putExtra("username", existingUser.username)
+                        startActivity(intent)
                     }else
                     {
                         Toast.makeText(this@LoginActivity,"Invalid. No user: $username",Toast.LENGTH_SHORT).show()

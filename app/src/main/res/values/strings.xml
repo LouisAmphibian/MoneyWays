@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">moneywaysapp</string>
-    <string name="greeting_text">Hello, John</string>
+    <string name="greeting_text">Hello, </string>
     <string name="total_balance">Total Balance</string>
     <string name="sample_total_amount">R 5,000.00</string>
     <string name="budget_label">Budget</string>
