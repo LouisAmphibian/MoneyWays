@@ -7,8 +7,8 @@ import androidx.room.Room
 
 // AppDatabase.kt to control operation
 @Database(
-    entities = [User::class, Category::class],
-    version = 2,
+    entities = [User::class, Category::class,  Expense::class],
+    version = 3,
     exportSchema = false
 )
 

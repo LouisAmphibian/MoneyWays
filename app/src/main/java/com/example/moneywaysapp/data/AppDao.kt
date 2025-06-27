@@ -31,7 +31,7 @@ interface AppDao {
     @Delete
     suspend fun deleteCategory(category: Category)
 
-    /*
+
     // Expense operations
     @Insert
     suspend fun insertExpense(expense: Expense): Long
@@ -48,6 +48,7 @@ interface AppDao {
     @Delete
     suspend fun deleteExpense(expense: Expense)
 
+    /*
     // Budget goal operations
     @Insert
     suspend fun insertBudgetGoal(goal: BudgetGoal): Long
