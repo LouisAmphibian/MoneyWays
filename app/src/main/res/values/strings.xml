@@ -13,4 +13,5 @@
     <string name="view_reports">View Reports</string>
     <string name="transactions">Transaction</string>
     <string name="money_ways">Money Ways</string>
+    <string name="select">Select Item</string>
 </resources>

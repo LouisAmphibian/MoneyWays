@@ -12,14 +12,6 @@ data class User(
     val password: String
 )
 
-// Category.kt
-@Entity(tableName = "categories")
-data class Category(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val userId: Long,
-    val name: String,
-    val color: String = "#FF0000"
-)
 
 /*
 // Expense.kt

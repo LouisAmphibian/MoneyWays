@@ -4,4 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#4CAF50</color>
     <color name="darkgreen">#1D8464</color>
+
+    <color name="your_primary_color">#1D8464</color>
+    <color name="your_primary_variant">#1D8464</color>
+    <color name="your_secondary_color">#1D8464</color>
 </resources>
