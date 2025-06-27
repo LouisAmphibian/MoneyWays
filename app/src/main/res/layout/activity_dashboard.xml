@@ -149,12 +149,25 @@
             android:layout_marginBottom="16dp" />
 
         <Button
-            android:id="@+id/viewReportsButton"
+            android:id="@+id/action_view_expenses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/view_reports"
             android:backgroundTint="#2764FF"
             android:textColor="#FFFFFF"
+            android:drawableStart="@android:drawable/ic_menu_agenda"
+            android:layout_marginBottom="16dp" />
+
+        <!--View Stats-->
+        <Button
+            android:id="@+id/action_view_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Stats"
+            android:backgroundTint="#2764FF"
+            android:textColor="#FFFFFF"
             android:drawableStart="@android:drawable/ic_menu_agenda" />
+
+
     </LinearLayout>
 </ScrollView>

@@ -48,6 +48,29 @@ interface AppDao {
     @Delete
     suspend fun deleteExpense(expense: Expense)
 
+    //view
+    // Query to retrieve total spent per category
+    @Query("""
+    SELECT c.name AS categoryName, c.color AS categoryColor, SUM(e.amount) AS totalAmount
+    FROM expenses e
+    JOIN categories c ON e.categoryId = c.id
+    WHERE e.userId = :userId AND e.date BETWEEN :startDate AND :endDate
+    GROUP BY e.categoryId
+""")
+    suspend fun getCategoryTotals(userId: Long, startDate: String?, endDate: String?): List<CategoryTotal>
+
+    // Query to retrieve all expenses with joined category data
+    //or joining category + expense for ReportViewActivity
+    @Query("""
+    SELECT e.*, c.name AS categoryName, c.color AS categoryColor
+    FROM expenses e
+    JOIN categories c ON e.categoryId = c.id
+    WHERE e.userId = :userId AND e.date BETWEEN :startDate AND :endDate
+    ORDER BY e.date DESC
+""")
+    suspend fun getExpensesWithCategories(userId: Long, startDate: String?, endDate: String?): List<ExpenseWithCategory>
+
+
     /*
     // Budget goal operations
     @Insert

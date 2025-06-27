@@ -54,4 +54,18 @@ Have questions or suggestions? Reach out to the team via GitHub Issues or email 
 
 ---
 
-> Built with inspired software developers by Ayanda, Donald, Fikile, and Musa🖥👨🏾‍💻.
+## 📫 Contact
+
+##  New Custom Features
+1. Expense photo attachment and in-app viewing from the report list (media-based).
+2. Gamified badge system awarding users for healthy spending patterns.
+
+Includes:
+✔ Expense stats by category and date range
+✔ MPAndroidChart graph with min/max overlays for budget goals
+✔ Reward badge feedback based on total monthly spend
+✔ Offline RoomDB support for reliability
+✔ Optimized UI for physical Android device
+✔ App icon + mobile-ready graphic assets
+
+> Built with inspired software developers by Ayanda🖥👨🏾‍💻.
