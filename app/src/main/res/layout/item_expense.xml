@@ -32,14 +32,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@color/your_primary_color"/>
 
             <ImageView
                 android:id="@+id/photoIcon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="8dp"
-                android:src="@drawable/ic_photo"
+                android:src="@drawable/image_preview_background"
                 android:visibility="gone"/>
         </LinearLayout>
 
