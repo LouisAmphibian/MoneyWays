@@ -1,3 +1,5 @@
+
+/*
 package com.example.moneywaysapp
 
 import android.content.Intent
@@ -78,3 +80,5 @@ class ReportViewActivity : AppCompatActivity() {
         return 1L
     }
 }
+
+ */

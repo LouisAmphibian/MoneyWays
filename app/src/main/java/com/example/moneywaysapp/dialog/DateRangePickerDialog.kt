@@ -1,4 +1,4 @@
-package com.example.moneywaysapp.dialog
+/*package com.example.moneywaysapp.dialog
 
 import android.app.DatePickerDialog
 import android.app.Dialog
@@ -47,3 +47,5 @@ class DateRangePickerDialog(
         }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show()
     }
 }
+
+ */

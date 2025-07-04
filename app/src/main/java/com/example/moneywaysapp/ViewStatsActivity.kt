@@ -1,3 +1,5 @@
+
+/*
 package com.example.moneywaysapp
 
 import android.os.Bundle
@@ -90,3 +92,5 @@ class ViewStatsActivity : AppCompatActivity() {
 
 
 }
+
+ */

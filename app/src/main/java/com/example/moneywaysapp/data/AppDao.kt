@@ -48,6 +48,7 @@ interface AppDao {
     @Delete
     suspend fun deleteExpense(expense: Expense)
 
+    /*
     //view
     // Query to retrieve total spent per category
     @Query("""
@@ -70,7 +71,7 @@ interface AppDao {
 """)
     suspend fun getExpensesWithCategories(userId: Long, startDate: String?, endDate: String?): List<ExpenseWithCategory>
 
-
+*/
     /*
     // Budget goal operations
     @Insert
