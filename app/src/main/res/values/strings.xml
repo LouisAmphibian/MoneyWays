@@ -14,4 +14,5 @@
     <string name="transactions">Transaction</string>
     <string name="money_ways">Money Ways</string>
     <string name="select">Select Item</string>
+    <string name="enter_your_username_and_email">Enter Your Username and Email</string>
 </resources>

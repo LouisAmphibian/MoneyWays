@@ -22,6 +22,7 @@ class LoginActivity:AppCompatActivity() {
     private lateinit var passwordInput: EditText
     private lateinit var loginBtn: Button
     private lateinit var doNotHaveAcc: TextView
+    private lateinit var forgotPassword : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +35,7 @@ class LoginActivity:AppCompatActivity() {
         passwordInput = findViewById(R.id.passwordInput)
         loginBtn =  findViewById(R.id.loginBtn)
         doNotHaveAcc =  findViewById(R.id.textView9)
+        forgotPassword = findViewById(R.id.resetPasswordLink)
 
         //for a user who doesn't have an account
         doNotHaveAcc.setOnClickListener {
@@ -41,20 +43,29 @@ class LoginActivity:AppCompatActivity() {
         }
 
         loginBtn.setOnClickListener {
-            val username = emailInput.text.toString()
+            val rawInput = emailInput.text.toString()
             val password = passwordInput.text.toString()
 
+
             //Check if empty
-            if(username.isEmpty() || password.isEmpty()){
+            if(rawInput.isEmpty() || password.isEmpty()){
                 Toast.makeText(this, "Please  fill all field",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
+            //allows login with either full name
+            val identifier = if(isValidEmail(rawInput)) {
+                rawInput //valid email
+            } else {
+                normalizeToFirstAndLast(rawInput)
+            }
+
 
             //block to login user in RoomDb in background then will show toast and success
             CoroutineScope(Dispatchers.IO).launch {
 
                 //Attempt to fetch the user from the database
-                val existingUser =  AppDatabase.getDatabase(this@LoginActivity).appDao().getUser(username, password)
+                val existingUser =  AppDatabase.getDatabase(this@LoginActivity).appDao().getUserByUsernameOrEmail(rawInput, password)
 
                 // Switch context to the Main (UI) thread after database operation
                 withContext(Dispatchers.Main){
@@ -69,13 +80,29 @@ class LoginActivity:AppCompatActivity() {
                         startActivity(intent)
                     }else
                     {
-                        Toast.makeText(this@LoginActivity,"Invalid. No user: $username",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@LoginActivity,"Invalid. No user: $rawInput",Toast.LENGTH_SHORT).show()
                     }
 
                 }
             }
         }
 
+        forgotPassword.setOnClickListener{
+            startActivity(Intent(this, ForgotPasswordActivity:: class.java))
+        }
+
+    }
+
+    //Take the first and last of the full name
+    private fun normalizeToFirstAndLast(name: String): String{
+        val parts = name.trim().split("\\s+".toRegex())
+        return if  (parts.size >= 2) "${parts.first()} ${parts.last()}" else name
+    }
+
+    //email having valid email values
+    private fun isValidEmail(email: String): Boolean{
+        val regex = Regex("^[\\w.-]+@[\\w.-]+\\.(com|co\\.za|org|net|gov)$", RegexOption.IGNORE_CASE)
+        return regex.matches(email)
     }
 }
 

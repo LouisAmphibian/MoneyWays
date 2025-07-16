@@ -14,9 +14,9 @@ interface AppDao {
     @Insert
     suspend fun insertUser(user: User): Long
 
-    //for login
-    @Query("SELECT * FROM users WHERE username = :username AND password = :password LIMIT 1")
-    suspend fun getUser(username: String, password: String): User?
+    //for login using username or email
+    @Query("SELECT * FROM users WHERE (username = :identifier OR email = :identifier) AND password = :password LIMIT 1")
+    suspend fun getUserByUsernameOrEmail(identifier: String, password: String): User?
 
     @Query("SELECT * FROM users WHERE username = :username LIMIT 1")
     suspend fun checkUsernameExists(username: String): User?

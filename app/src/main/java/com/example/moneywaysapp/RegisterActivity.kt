@@ -28,27 +28,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var registerBtn: Button
     private lateinit var alreadyHaveAcc: TextView
 
-    //check  the last two words of the user
-    private fun isValidFullName(name: String):Boolean {
-        return name.trim().split("\\s+".toRegex()).size >= 2
-    }
 
-    //email having valid email values
-    private fun isValidEmail(email: String): Boolean{
-        val regex = Regex("^[\\\\w\\\\.-]+@[\\\\w\\\\.-]+\\\\.(com|co\\\\.za|org|net|gov)\$", RegexOption.IGNORE_CASE)
-        return regex.matches(email)
-    }
-
-    //strong password
-    private fun isStrongPassword(password: String): Boolean{
-        val lengthOk =password.length >= 8
-        val hasUppercase = password.any {it.isUpperCase()}
-        val hasLowercase = password.any {it.isLowerCase()}
-        val hasDigit = password.any {it.isDigit()}
-        val hasSpecialChar = password.any {"!@#\$%^&*()-_=+[]{}|;:'\",.<>?/\\`~".contains(it)}
-
-        return lengthOk && hasUppercase && hasLowercase && hasDigit && hasSpecialChar
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +40,7 @@ class RegisterActivity : AppCompatActivity() {
         rePasswordInput = findViewById<EditText>(R.id.passwordInput2)
         registerBtn = findViewById<Button>(R.id.signUpBtn)
         alreadyHaveAcc = findViewById<TextView>(R.id.textView9)
+
 
         //already have account
         alreadyHaveAcc.setOnClickListener{
@@ -110,7 +91,7 @@ class RegisterActivity : AppCompatActivity() {
 
 
                 //Create user object
-                val newUser = User(username = username, password = matchPassword)
+                val newUser = User(username = username, email= email ,password = matchPassword)
 
                 //block to register user in RoomDb in background then will show toast and success
                 CoroutineScope(Dispatchers.IO).launch {
@@ -140,5 +121,31 @@ class RegisterActivity : AppCompatActivity() {
 
                 }
             }
+
         }
+
+    //check  the last two words of the user
+    // Only allow exactly 2 words (e.g. First and Last name)
+    private fun isValidFullName(name: String): Boolean {
+        val parts = name.trim().split("\\s+".toRegex())
+        return parts.size == 2
+    }
+
+    //email having valid email values
+    private fun isValidEmail(email: String): Boolean{
+        val regex = Regex("^[\\w.-]+@[\\w.-]+\\.(com|co\\.za|org|net|gov)$", RegexOption.IGNORE_CASE)
+        return regex.matches(email)
+    }
+
+    //strong password
+    private fun isStrongPassword(password: String): Boolean{
+        val lengthOk =password.length >= 8
+        val hasUppercase = password.any {it.isUpperCase()}
+        val hasLowercase = password.any {it.isLowerCase()}
+        val hasDigit = password.any {it.isDigit()}
+        val hasSpecialChar = password.any {"!@#\$%^&*()-_=+[]{}|;:'\",.<>?/\\`~".contains(it)}
+
+        return lengthOk && hasUppercase && hasLowercase && hasDigit && hasSpecialChar
+    }
+
     }

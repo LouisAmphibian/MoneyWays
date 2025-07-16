@@ -15,21 +15,30 @@
         <activity
             android:name="com.example.moneywaysapp.ViewStatsActivity"
             android:exported="false" />
+
         <activity
             android:name="com.example.moneywaysapp.ReportViewActivity"
             android:exported="false" />
+
         <activity
             android:name="com.example.moneywaysapp.AddExpenseActivity"
             android:exported="false" />
+
+       <activity android:name="com.example.moneywaysapp.ForgotPasswordActivity"
+           android:exported="false"/>
+
         <activity
             android:name="com.example.moneywaysapp.RegisterActivity"
             android:exported="false" />
+
         <activity
             android:name="com.example.moneywaysapp.LoginActivity"
             android:exported="false" />
+
         <activity
             android:name="com.example.moneywaysapp.DashboardActivity"
             android:exported="false" />
+
         <activity
             android:name="com.example.moneywaysapp.MainActivity"
             android:exported="true">
