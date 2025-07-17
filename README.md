@@ -57,7 +57,7 @@ All through a mobile experience that is clean, intuitive, and secure.
 
 ## 📫 Contact
 
-Have questions or suggestions? Reach out to the team via GitHub Issues or email us directly!
+Have questions or suggestions? Reach out to me via LinkedIn 
 
 ---
 
