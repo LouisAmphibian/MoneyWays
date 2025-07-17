@@ -1,173 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F6F9FF"
-   >
+    android:background="#F6F9FF">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:background="#FFFFFF">
 
-        <!-- Greeting -->
-        <TextView
-            android:id="@+id/greetingText"
-            android:layout_width="wrap_content"
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/greeting_text"
-            android:layout_marginStart="11dp"
-            android:layout_marginTop="40dp"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_marginBottom="24dp" />
+            android:background="#00008577"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_menu_nav" />
 
-        <!-- Balance Card -->
+        <!-- Main Content -->
         <LinearLayout
-            android:id="@+id/balanceCard"
-            android:layout_width="match_parent"
+            android:id="@+id/mainContent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="24dp"
-            android:background="@drawable/card_background"
-            android:layout_marginBottom="24dp"
-            android:elevation="4dp">
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
+            <!-- Greeting -->
             <TextView
+                android:id="@+id/greetingText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/total_balance"
-                android:textColor="#7A7A7A"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/totalBalance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sample_total_amount"
-                android:textColor="#000000"
-                android:textSize="28sp"
+                android:text="@string/greeting_text"
+                android:layout_marginTop="10dp"
+                android:textSize="32sp"
                 android:textStyle="bold"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="16dp" />
+                android:textColor="#000000"
+                android:layout_marginBottom="24dp" />
 
+            <!-- Balance Card -->
             <LinearLayout
+                android:id="@+id/balanceCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="3">
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:background="@drawable/card_background"
+                android:layout_marginBottom="24dp"
+                android:elevation="4dp">
 
-                <!-- Budget -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_balance"
+                    android:textColor="#7A7A7A"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/totalBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sample_total_amount"
+                    android:textColor="#000000"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp" />
+
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <!-- Budget -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/budget_label"
+                            android:textColor="#7A7A7A"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/budgetText"
+                            android:text="@string/sample_budget"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <!-- Expenses -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
                         android:layout_height="wrap_content"
-                        android:text="@string/budget_label"
-                        android:textColor="#7A7A7A"
-                        android:textSize="14sp" />
+                        android:gravity="center">
 
-                    <TextView
-                        android:id="@+id/budgetText"
-                        android:text="@string/sample_budget"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#000000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                        <TextView
+                            android:text="@string/expenses_label"
+                            android:textSize="14sp"
+                            android:textColor="#7A7A7A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <!-- Expenses -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content"
-                    android:gravity="center">
+                        <TextView
+                            android:id="@+id/expensesText"
+                            android:text="@string/sample_expenses"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:text="@string/expenses_label"
-                        android:textSize="14sp"
-                        android:textColor="#7A7A7A"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <!-- Savings -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
 
-                    <TextView
-                        android:id="@+id/expensesText"
-                        android:text="@string/sample_expenses"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#000000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                        <TextView
+                            android:text="@string/savings_label"
+                            android:textSize="14sp"
+                            android:textColor="#7A7A7A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <!-- Savings -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content"
-                    android:gravity="end">
-
-                    <TextView
-                        android:text="@string/savings_label"
-                        android:textSize="14sp"
-                        android:textColor="#7A7A7A"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:id="@+id/savingsText"
-                        android:text="@string/sample_savings"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#000000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/savingsText"
+                            android:text="@string/sample_savings"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
+            <!-- Buttons -->
+            <Button
+                android:id="@+id/addExpenseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_expense"
+                android:backgroundTint="#2764FF"
+                android:textColor="#FFFFFF"
+                android:drawableStart="@android:drawable/ic_input_add"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/action_view_expenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/view_reports"
+                android:backgroundTint="#2764FF"
+                android:textColor="#FFFFFF"
+                android:drawableStart="@android:drawable/ic_menu_agenda"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/action_view_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Stats"
+                android:backgroundTint="#2764FF"
+                android:textColor="#FFFFFF"
+                android:drawableStart="@android:drawable/ic_menu_agenda" />
         </LinearLayout>
 
-        <!-- Buttons -->
-        <Button
-            android:id="@+id/addExpenseButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/add_expense"
-            android:backgroundTint="#2764FF"
-            android:textColor="#FFFFFF"
-            android:drawableStart="@android:drawable/ic_input_add"
-            android:layout_marginBottom="16dp" />
-
-        <Button
-            android:id="@+id/action_view_expenses"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/view_reports"
-            android:backgroundTint="#2764FF"
-            android:textColor="#FFFFFF"
-            android:drawableStart="@android:drawable/ic_menu_agenda"
-            android:layout_marginBottom="16dp" />
-
-        <!--View Stats-->
-        <Button
-            android:id="@+id/action_view_stats"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Stats"
-            android:backgroundTint="#2764FF"
-            android:textColor="#FFFFFF"
-            android:drawableStart="@android:drawable/ic_menu_agenda" />
-
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
