@@ -12,7 +12,6 @@
 
 This app was proudly built by a passionate team of developers:
 - *Ayanda*
-- *Fikile*
 
 Together, we aimed to build a tool that empowers individuals to make better financial decisions with confidence.
 
