@@ -1,10 +1,12 @@
 # 💰 MoneyWays
 
-<img width="1280" height="2856" alt="1" src="https://github.com/user-attachments/assets/f87c27cd-c9cf-42eb-a613-7192f5e626c7" />
-<img width="1280" height="2856" alt="lau" src="https://github.com/user-attachments/assets/95b651e5-8a96-42d3-aca6-bd6aaaff9755" />
-<img width="1280" height="2856" alt="reg" src="https://github.com/user-attachments/assets/9fbf2b4d-7676-44bc-8cd6-eae382ac7109" />
-<img width="1280" height="2856" alt="log" src="https://github.com/user-attachments/assets/59a0ac82-8b8a-4add-a038-70b421e2b95a" />
-<img width="1280" height="2856" alt="forgot" src="https://github.com/user-attachments/assets/a392726e-8f8f-47c9-b11c-8cfc4a6de35e" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f87c27cd-c9cf-42eb-a613-7192f5e626c7" width="250" />
+  <img src="https://github.com/user-attachments/assets/95b651e5-8a96-42d3-aca6-bd6aaaff9755" width="250" />
+  <img src="https://github.com/user-attachments/assets/9fbf2b4d-7676-44bc-8cd6-eae382ac7109" width="250" />
+  <img src="https://github.com/user-attachments/assets/59a0ac82-8b8a-4add-a038-70b421e2b95a" width="250" />
+  <img src="https://github.com/user-attachments/assets/a392726e-8f8f-47c9-b11c-8cfc4a6de35e" width="250" />
+</p>
 
 *Take Control of Your Money, Your Way*
 
