@@ -1,4 +1,12 @@
-# 💰 MoneyWaysApp
+# 💰 MoneyWays
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f87c27cd-c9cf-42eb-a613-7192f5e626c7" width="150" />
+  <img src="https://github.com/user-attachments/assets/95b651e5-8a96-42d3-aca6-bd6aaaff9755" width="150" />
+  <img src="https://github.com/user-attachments/assets/9fbf2b4d-7676-44bc-8cd6-eae382ac7109" width="150" />
+  <img src="https://github.com/user-attachments/assets/59a0ac82-8b8a-4add-a038-70b421e2b95a" width="150" />
+  <img src="https://github.com/user-attachments/assets/a392726e-8f8f-47c9-b11c-8cfc4a6de35e" width="150" />
+</p>
 
 *Take Control of Your Money, Your Way*
 
