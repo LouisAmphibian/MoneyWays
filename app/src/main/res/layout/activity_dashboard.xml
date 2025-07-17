@@ -25,39 +25,44 @@
             app:layout_constraintTop_toTopOf="parent"
             app:navigationIcon="@drawable/ic_menu_nav" />
 
+        <!-- Greeting -->
+
         <!-- Main Content -->
+
+
         <LinearLayout
             android:id="@+id/mainContent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
             android:orientation="vertical"
             android:padding="24dp"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
-            <!-- Greeting -->
+            <!-- Balance Card -->
             <TextView
                 android:id="@+id/greetingText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="@string/greeting_text"
-                android:layout_marginTop="10dp"
-                android:textSize="32sp"
-                android:textStyle="bold"
                 android:textColor="#000000"
-                android:layout_marginBottom="24dp" />
+                android:textSize="32sp"
+                android:textStyle="bold" />
 
-            <!-- Balance Card -->
             <LinearLayout
                 android:id="@+id/balanceCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="24dp"
-                android:background="@drawable/card_background"
                 android:layout_marginBottom="24dp"
-                android:elevation="4dp">
+                android:background="@drawable/card_background"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="24dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -70,12 +75,12 @@
                     android:id="@+id/totalBalance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp"
                     android:text="@string/sample_total_amount"
                     android:textColor="#000000"
                     android:textSize="28sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="16dp" />
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -86,9 +91,9 @@
                     <!-- Budget -->
                     <LinearLayout
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_height="wrap_content">
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -99,62 +104,62 @@
 
                         <TextView
                             android:id="@+id/budgetText"
-                            android:text="@string/sample_budget"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="#000000"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/sample_budget"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <!-- Expenses -->
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
                         android:layout_height="wrap_content"
-                        android:gravity="center">
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:text="@string/expenses_label"
-                            android:textSize="14sp"
-                            android:textColor="#7A7A7A"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/expenses_label"
+                            android:textColor="#7A7A7A"
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/expensesText"
-                            android:text="@string/sample_expenses"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="#000000"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/sample_expenses"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <!-- Savings -->
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
                         android:layout_height="wrap_content"
-                        android:gravity="end">
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:text="@string/savings_label"
-                            android:textSize="14sp"
-                            android:textColor="#7A7A7A"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/savings_label"
+                            android:textColor="#7A7A7A"
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/savingsText"
-                            android:text="@string/sample_savings"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="#000000"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/sample_savings"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -164,31 +169,67 @@
                 android:id="@+id/addExpenseButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/add_expense"
+                android:layout_marginBottom="16dp"
                 android:backgroundTint="#2764FF"
-                android:textColor="#FFFFFF"
                 android:drawableStart="@android:drawable/ic_input_add"
-                android:layout_marginBottom="16dp" />
+                android:text="@string/add_expense"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/action_view_expenses"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/view_reports"
+                android:layout_marginBottom="16dp"
                 android:backgroundTint="#2764FF"
-                android:textColor="#FFFFFF"
                 android:drawableStart="@android:drawable/ic_menu_agenda"
-                android:layout_marginBottom="16dp" />
+                android:text="@string/view_reports"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/action_view_stats"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="View Stats"
                 android:backgroundTint="#2764FF"
-                android:textColor="#FFFFFF"
-                android:drawableStart="@android:drawable/ic_menu_agenda" />
+                android:drawableStart="@android:drawable/ic_menu_agenda"
+                android:text="View Stats"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/money_ways"
+            android:textSize="30sp"
+            app:fontFamily="sans-serif"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textStyle="normal"
+            android:text="Start your Journey"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="107dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:srcCompat="@drawable/logo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
