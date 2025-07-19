@@ -262,10 +262,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:backgroundTint="@color/mint"
+        app:fabAlignmentMode="center"
         app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="40dp"
-        app:fabAlignmentMode="center"
-        app:hideOnScroll="false"/>
+        app:hideOnScroll="false" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAdd"

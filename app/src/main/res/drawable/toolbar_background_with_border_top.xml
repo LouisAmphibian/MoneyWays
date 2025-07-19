@@ -9,10 +9,11 @@
     </item>
 
     <!--Top green line -->
-    <item android:bottom="467dp">
+    <item android:bottom="563dp"> <!-- This places the green line at the bottom -->
         <shape android:shape="rectangle">
-            <size android:height="0.5dp"/>
-            <solid android:color="#00FF00"/>
+            <size android:height="0.5dp" />
+            <solid android:color="#00FF00" />
         </shape>
     </item>
+
 </layer-list>
