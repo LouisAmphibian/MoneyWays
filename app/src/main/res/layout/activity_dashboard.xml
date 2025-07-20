@@ -44,14 +44,14 @@
         <LinearLayout
             android:id="@+id/mainContent"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/toolbar_background_with_border_top"
             android:orientation="vertical"
             android:padding="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            android:background="@drawable/toolbar_background_with_border_top"
             app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
             <!-- Balance Card -->
@@ -233,8 +233,10 @@
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/mainContent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -247,13 +249,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
             app:srcCompat="@drawable/logo" />
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/frame_layout"/>
 
     <!--Bottom nav bar-->
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -289,7 +291,7 @@
         android:background="@android:color/transparent"
         app:menu="@menu/bottom_menu"
         app:labelVisibilityMode="labeled"
-        android:backgroundTint="@color/purple_500"
+        app:layout_anchor="@id/bottomAppBar"
         />
 
 
